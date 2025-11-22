@@ -47,10 +47,13 @@ if ($file_info['size'] > $max_size) {
 }
 
 // Generar nombre de archivo único y seguro
-$extension = pathinfo($file_info['name'], PATHINFO_EXTENSION);
-// Usamos el nombre del producto y un ID único para el nombre final
-$base_name = strtolower(str_replace(' ', '_', $nombre));
-$nombre_archivo_db = $base_name . '_' . time() . '.' . $extension;
+$file_name_original = $file_info['name'];
+$extension = pathinfo($file_name_original, PATHINFO_EXTENSION);
+$base_name = pathinfo($file_name_original, PATHINFO_FILENAME);
+$random_id = substr(md5(uniqid(rand(), true)), 0, 4);
+$nombre_archivo_db = strtolower(str_replace([' ', '.'], ['_', ''], $base_name)) . '-' . $random_id . '.' . $extension;
+
+
 
 // 5. Definir la ruta de destino y mover el archivo
 // Asegúrate de que esta ruta sea correcta y la carpeta exista y tenga permisos de escritura.
