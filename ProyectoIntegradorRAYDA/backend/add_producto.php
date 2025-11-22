@@ -32,7 +32,7 @@ if (!isset($_FILES['imagen']) || $_FILES['imagen']['error'] !== UPLOAD_ERR_OK) {
 }
 
 $file_info = $_FILES['imagen'];
-$allowed_types = ['image/jpeg', 'image/png', 'image/webp'];
+$allowed_types = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
 $max_size = 5 * 1024 * 1024; // 5 MB
 
 // Validaciones de seguridad de la imagen
@@ -54,7 +54,7 @@ $nombre_archivo_db = $base_name . '_' . time() . '.' . $extension;
 
 // 5. Definir la ruta de destino y mover el archivo
 // Asegúrate de que esta ruta sea correcta y la carpeta exista y tenga permisos de escritura.
-$ruta_destino = '../../assets/' . $nombre_archivo_db;
+$ruta_destino = '../assets/' . $nombre_archivo_db;
 
 if (!move_uploaded_file($file_info['tmp_name'], $ruta_destino)) {
     http_response_code(500);
