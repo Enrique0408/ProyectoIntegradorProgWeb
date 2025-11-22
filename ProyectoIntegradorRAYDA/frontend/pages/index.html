@@ -14,7 +14,6 @@
             <img src="../../assets/Rayda.jpg" alt="Logo Construcción MX">
             <h1>Construcción MX</h1>
         </div>
-        
         <nav class="main-nav">
             <a id="admin-agregar" href="agregar_producto.html" style="display:none" class="nav-link">➕ Agregar</a>
             <a id="admin-registros" href="registros.html" style="display:none" class="nav-link">📜 Registros</a>
@@ -43,7 +42,6 @@
         (async () => {
             await ensureAuth();
             await showAdminLinks('admin-links');
-            // Opcional: Ocultar el mensaje de carga después de cargar datos
             document.getElementById('loading-message').style.display = 'none';
         })();
     </script>
