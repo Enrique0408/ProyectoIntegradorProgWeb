@@ -1,0 +1,115 @@
+/* --- ESTILOS BASE --- */
+body {
+    /* Mismo estilo de fuente */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0;
+    /* Fondo que contrasta con el login box */
+    background-color: #f0f4f7; 
+    color: #343a40; 
+    display: flex; /* Centrado vertical */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupar toda la altura de la vista */
+}
+
+/* --- CAJA DE LOGIN --- */
+.login-box {
+    /* Ancho Máximo controlado para que no se vea largo */
+    max-width: 360px; 
+    width: 90%; 
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    /* Sombra consistente con las 'cards' del catálogo */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+    text-align: left;
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #2c3e50; /* Color corporativo */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Contenedor de cada par label-input */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Estilo para las etiquetas */
+.login-box label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+/* --- CAMPOS DE ENTRADA (INPUTS) --- */
+.login-box input {
+    width: 100%; /* Ocupa el 100% del contenedor .form-group */
+    padding: 0.75rem 1rem; /* Padding generoso */
+    margin: 0; /* Quitamos el margen interior que tenías */
+    border-radius: 8px; /* Bordes suaves */
+    border: 1px solid #ced4da;
+    box-sizing: border-box; /* Asegura que padding y border estén incluidos en el width */
+    transition: border-color 0.2s;
+}
+
+.login-box input:focus {
+    border-color: #3498db; /* Color de acento al enfocar */
+    outline: none; /* Quitar el contorno predeterminado del navegador */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* Sombra suave de enfoque */
+}
+
+/* --- ACCIONES Y BOTONES --- */
+.login-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-between; /* Espacio entre los botones */
+}
+
+/* Estilo base para todos los botones */
+.btn {
+    flex-grow: 1; /* Permite que ambos botones crezcan por igual */
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Botón primario (Entrar) */
+#btn-login {
+    background: #3498db; /* Azul corporativo, más consistente */
+    color: white;
+}
+
+#btn-login:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+}
+
+/* Botón secundario (Demo admin) */
+#btn-demo {
+    background: #bdc3c7; /* Gris claro sutil */
+    color: #2c3e50;
+}
+
+#btn-demo:hover {
+    background: #aeb6bf;
+    transform: translateY(-1px);
+}
+
+/* Mensaje de error */
+.error-msg {
+    color: #e74c3c; /* Rojo de alerta */
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+    display: block; /* Asegura que ocupe su propia línea si es visible */
+}
