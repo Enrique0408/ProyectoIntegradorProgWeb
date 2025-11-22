@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Productos - Inventario</title>
+  <link rel="stylesheet" href="../styles/lista.css">
+</head>
+<body>
+  <header>
+    <h1>🧾 Lista de Movimientos</h1>
+    <nav>
+      <a href="index.html">🏠 Catálogo</a>
+      <a id="admin-registros-2" href="registros.html" style="display:none">📜 Registros</a>
+      <a id="link-logout-2" href="#" style="display:none">🚪 Salir</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="lista-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-lista">
+          <!-- Los productos se cargan con JS -->
+        </tbody>
+      </table>
+
+      <div class="acciones">
+        <label>
+          Tipo de movimiento:
+          <select id="tipo-movimiento">
+            <option value="salida">Salida (Retirar del almacén)</option>
+            <option value="entrada">Entrada (Agregar al almacén)</option>
+          </select>
+        </label>
+
+        <button id="btn-guardar">💾 Guardar cambios</button>
+        <button id="btn-limpiar">🗑️ Limpiar lista</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Construcción MX - Sistema de Inventario</p>
+  </footer>
+
+  <script src="../../scripts/lista.js"></script>
+  <script src="../../scripts/auth_check.js"></script>
+  <script src="../../scripts/logout.js"></script>
+  <script>
+    (async ()=>{ await ensureAuth(); await showAdminLinks(); })();
+  </script>
+</body>
+</html>

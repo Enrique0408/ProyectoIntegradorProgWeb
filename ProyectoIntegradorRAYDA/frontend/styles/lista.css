@@ -1,0 +1,46 @@
+.cantidad-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-control {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-control:hover {
+  background-color: #2980b9;
+}
+
+.input-cantidad {
+  width: 60px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+
+/* Estilo para botones inferiores */
+.acciones button {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.acciones button:hover {
+  background: #34495e;
+}

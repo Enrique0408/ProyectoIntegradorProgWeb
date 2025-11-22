@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Agregar producto - Inventario</title>
+  <link rel="stylesheet" href="../styles/catalogo.css">
+  <style>.form{max-width:520px;margin:2rem auto;padding:1rem;background:#fff;border-radius:8px}</style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="../../assets/Rayda.jpg" alt="logo"><h1>Construcción MX</h1></div>
+    <nav><a href="index.html">🏠 Catálogo</a></nav>
+  </header>
+
+  <main>
+    <section class="form">
+      <h2>Agregar producto</h2>
+      <label>Nombre</label>
+      <input id="nombre" type="text">
+      <label>Cantidad</label>
+      <input id="cantidad" type="number" value="0">
+      <label>Lugar</label>
+      <input id="lugar" type="text">
+      <label>Nombre de imagen (en carpeta assets)</label>
+      <input id="imagen" type="text">
+      <div style="margin-top:0.6rem">
+        <button id="btn-agregar">Agregar</button>
+        <span id="msg" style="margin-left:1rem;color:#c0392b"></span>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/auth_check.js"></script>
+  <script src="../../scripts/agregar_producto.js"></script>
+</body>
+</html>

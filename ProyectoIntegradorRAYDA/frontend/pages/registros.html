@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Registros - Inventario</title>
+  <link rel="stylesheet" href="../styles/lista.css">
+  <style>table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px solid #eee}</style>
+</head>
+<body>
+  <header>
+    <h1>📜 Registros</h1>
+    <nav><a href="index.html">🏠 Catálogo</a></nav>
+  </header>
+  <main>
+    <section style="padding:1rem;">
+      <table>
+        <thead><tr><th>Fecha</th><th>Producto</th><th>Tipo</th><th>Cantidad</th><th>Usuario</th></tr></thead>
+        <tbody id="tabla-registros"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../../scripts/auth_check.js"></script>
+  <script src="../../scripts/registros.js"></script>
+</body>
+</html>
