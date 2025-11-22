@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Agregar producto - Inventario</title>
-    <link rel="stylesheet" href="../styles/AgregarProducto.css"> 
+    <link rel="stylesheet" href="../styles/AgregarProducto.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -22,14 +24,17 @@
             <h2>Agregar producto</h2>
             <label for="nombre">Nombre</label>
             <input id="nombre" type="text">
-            
+
             <label for="cantidad">Cantidad</label>
             <input id="cantidad" type="number" value="0">
-            
+
             <label for="lugar">Lugar</label>
             <input id="lugar" type="text">
-            
-            <div class="form-actions"> 
+
+            <label for="imagen">Imagen del Producto</label>
+            <input id="imagen" type="file" accept="image/jpeg, image/png, image/webp">
+
+            <div class="form-actions">
                 <button id="btn-agregar">Agregar</button>
                 <span id="msg"></span>
             </div>
@@ -43,4 +48,5 @@
     <script src="../../scripts/auth_check.js"></script>
     <script src="../../scripts/agregar_producto.js"></script>
 </body>
+
 </html>
