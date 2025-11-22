@@ -27,8 +27,8 @@ foreach ($lista as $item) {
     $conexion->query("UPDATE inventario SET cantidad = $nuevo WHERE id = $id");
 
     // Registrar movimiento
-    $stmt = $conexion->prepare("INSERT INTO registros (id_producto, tipo_movimiento, cantidad, usuario) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param('isis', $id, $tipo, $cantidad, $usuario);
+    $stmt = $conexion->prepare("INSERT INTO registros (id_producto, tipo_movimiento, cantidad) VALUES (?, ?, ?)");
+    $stmt->bind_param('isis', $id, $tipo, $cantidad);
     $stmt->execute();
 }
 

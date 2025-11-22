@@ -14,7 +14,6 @@ CREATE TABLE IF NOT EXISTS registros (
     id_producto INT,
     tipo_movimiento VARCHAR(20) NOT NULL,
     cantidad INT NOT NULL,
-    usuario VARCHAR(100) DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_producto) REFERENCES inventario(id) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
