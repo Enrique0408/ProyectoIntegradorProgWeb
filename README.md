@@ -51,3 +51,6 @@ Si la CLI de PHP es distinta a la de Apache, comprueba `php --ini` y `phpinfo()`
 
 Registro, que muestre los datos y guarde la informacion
 Agregacion de funcion para guardar productos dentro del catalogo
+
+
+AASDASDASDASD :V OLA PAPUSH
