@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario - Construcción MX</title>
     <link rel="stylesheet" href="../styles/catalogo.css">
 </head>
+
 <body>
     <header>
-    <div class="logo">
-        <img src="../../assets/Rayda.jpg" alt="Logo Construcción MX">
-        <h1>Construcción MX</h1>
-    </div>
+        <div class="logo">
+            <img src="../../assets/Rayda.jpg" alt="Logo Construcción MX">
+            <h1>Construcción MX</h1>
+        </div>
         <a id="admin-agregar" href="agregar_producto.html" style="display:none">➕ Agregar</a>
         <a id="admin-registros" href="registros.html" style="display:none">📜 Registros</a>
         <a href="lista.html">🧾 Lista</a>
         <a id="link-logout" href="#" style="display:none">🚪 Salir</a>
         <span id="admin-links"></span>
-    </nav>
+        </nav>
     </header>
 
 
@@ -32,14 +34,15 @@
     </footer>
 
     <script src="../../scripts/catalogo.js"></script>
-        <script src="../../scripts/auth_check.js"></script>
-        <script src="../../scripts/logout.js"></script>
-        <script>
-            // On load show admin links (or login) and ensure page requires auth
-            (async () => {
-                await ensureAuth();
-                await showAdminLinks('admin-links');
-            })();
-        </script>
+    <script src="../../scripts/auth_check.js"></script>
+    <script src="../../scripts/logout.js"></script>
+    <script>
+        // On load show admin links (or login) and ensure page requires auth
+        (async () => {
+            await ensureAuth();
+            await showAdminLinks('admin-links');
+        })();
+    </script>
 </body>
+
 </html>

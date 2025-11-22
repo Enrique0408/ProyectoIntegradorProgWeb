@@ -14,15 +14,14 @@ $input = json_decode(file_get_contents('php://input'), true) ?? $_POST;
 $nombre = $conexion->real_escape_string(trim($input['nombre'] ?? ''));
 $cantidad = (int)($input['cantidad'] ?? 0);
 $lugar = $conexion->real_escape_string(trim($input['lugar'] ?? ''));
-$imagen = $conexion->real_escape_string(trim($input['imagen'] ?? ''));
 
 if ($nombre === '') {
     echo json_encode(['status' => 'error', 'message' => 'Nombre requerido']);
     exit;
 }
 
-$stmt = $conexion->prepare('INSERT INTO inventario (nombre, cantidad, lugar, imagen) VALUES (?, ?, ?, ?)');
-$stmt->bind_param('siss', $nombre, $cantidad, $lugar, $imagen);
+$stmt = $conexion->prepare('INSERT INTO inventario (nombre, cantidad, lugar) VALUES (?, ?, ?)');
+$stmt->bind_param('siss', $nombre, $cantidad, $lugar);
 if ($stmt->execute()) {
     echo json_encode(['status' => 'ok', 'id' => $stmt->insert_id]);
 } else {

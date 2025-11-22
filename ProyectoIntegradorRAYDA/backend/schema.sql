@@ -5,8 +5,7 @@ CREATE TABLE IF NOT EXISTS inventario (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
     cantidad INT NOT NULL DEFAULT 0,
-    lugar VARCHAR(255) DEFAULT NULL,
-    imagen VARCHAR(255) DEFAULT NULL
+    lugar VARCHAR(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS registros (
@@ -27,9 +26,9 @@ CREATE TABLE IF NOT EXISTS usuarios (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Datos de ejemplo
-INSERT INTO inventario (nombre, cantidad, lugar, imagen) VALUES
-('Martillo', 10, 'Bodega A', 'martillo.jpg'),
-('Taladro', 5, 'Bodega B', 'taladro.jpg'),
-('Clavos (1kg)', 50, 'Bodega A', 'clavos.jpg');
+INSERT INTO inventario (nombre, cantidad, lugar) VALUES
+('Martillo', 10, 'Bodega A'),
+('Taladro', 5, 'Bodega B'),
+('Clavos (1kg)', 50, 'Bodega A');
 
 -- Nota: las cuentas de usuario pueden ser creadas mediante el endpoint de login (si la tabla está vacía se siembran 'admin' y 'user').
