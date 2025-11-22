@@ -14,14 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
         card.classList.add("card");
 
         card.innerHTML = `
-          <img src="../../assets/${producto.nombre}.jpg" alt="${producto.nombre}" />
-          <h3>${producto.nombre}</h3>
-          <p><strong>Cantidad:</strong> ${producto.cantidad}</p>
-          <p><strong>Ubicación:</strong> ${producto.lugar}</p>
-          <button class="btn-agregar" data-id="${producto.id}" data-nombre="${producto.nombre}">
-            ➕ Agregar a lista
-          </button>
-        `;
+                    <img src="../../assets/${producto.imagen}" alt="${producto.nombre}" /> 
+          <h3>${producto.nombre}</h3>
+          <p><strong>Cantidad:</strong> ${producto.cantidad}</p>
+          <p><strong>Ubicación:</strong> ${producto.lugar}</p>
+          <button class="btn-agregar" data-id="${producto.id}" data-nombre="${producto.nombre}">
+            ➕ Agregar a lista
+          </button>
+        `;
 
         contenedor.appendChild(card);
       });
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error al cargar los productos:", error);
       contenedor.innerHTML = "<p>Error al cargar los productos.</p>";
     });
-  
+
   // Pequeña notificación no bloqueante
   function showToast(message, duration = 1600) {
     const existing = document.querySelector('.app-toast');
