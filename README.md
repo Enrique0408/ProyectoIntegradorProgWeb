@@ -47,3 +47,7 @@ extension=mysqli
 5. Verifica creando `phpinfo.php` con `<?php phpinfo(); ?>` y abriéndolo en el navegador.
 
 Si la CLI de PHP es distinta a la de Apache, comprueba `php --ini` y `phpinfo()` para ver qué `php.ini` carga cada uno.
+
+
+Registro, que muestre los datos y guarde la informacion
+Agregacion de funcion para guardar productos dentro del catalogo

@@ -11,14 +11,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const nombre = document.getElementById('nombre').value.trim();
     const cantidad = Number(document.getElementById('cantidad').value) || 0;
     const lugar = document.getElementById('lugar').value.trim();
-    const imagen = document.getElementById('imagen').value.trim();
 
     if (!nombre) { msg.textContent = 'Nombre requerido'; return; }
 
     try {
       const res = await fetch('../../backend/add_producto.php', {
         method: 'POST', headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({ nombre, cantidad, lugar, imagen })
+        body: JSON.stringify({ nombre, cantidad, lugar })
       });
       const data = await res.json();
       if (data.status === 'ok') {
